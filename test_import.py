@@ -11,7 +11,7 @@ def main(args=None):
     # four ros2 nodes can be provided to the constructor 
     # default_ros_node(default node used for the clock,ros2_control and service unless overiden),ros_clock_node,ros_control_node,ros_service_node
     # if the default_ros_node is used for everything you may experience bottlenecks
-    gs_ros_bridge=GsRosBridge(default_ros_node,"src/configs/ackerman_demo.yaml")
+    gs_ros_bridge=GsRosBridge(default_ros_node,"src/configs/ackerman_demo.yaml",add_debug_objects=True)
     gs_ros_bridge.build()
     
     while rclpy.ok():
